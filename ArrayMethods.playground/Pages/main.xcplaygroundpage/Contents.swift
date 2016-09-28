@@ -17,6 +17,10 @@
 // write your code here
 
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+for days in daysOfTheWeek {
+    print(days)
+}
 
 
 
@@ -29,7 +33,10 @@
 
 
 
-
+let numDaysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+for (index, value) in numDaysOfTheWeek.enumerated() {
+    print("\(index + 1)/ \(value)")
+}
 
 
 
@@ -39,7 +46,12 @@
 // write your code here
 
 
-
+var emptyArray: [String] = []
+if emptyArray.isEmpty {
+    print("This array is empty.")
+} else {
+    print("I have something.")
+}
 
 
 
@@ -50,8 +62,10 @@
  */
 // write your code here
 
-
-
+var reserseEmptyArray: [String] = []
+if reserseEmptyArray.count < 1 {
+    print("This array is empty.")
+}
 
 
 
@@ -64,7 +78,7 @@
 // write your code here
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -75,8 +89,11 @@
  */
 // write your code here
 
-
-
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
+for (index, value) in daysOfTheWeek.enumerated() {
+    print("\(index + 1)/ \(value)")
+}
 
 
 
@@ -87,7 +104,8 @@
 // write your code here
 
 
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -99,7 +117,9 @@
 // write your code here
 
 
-
+for days in daysOfTheWeek {
+    print(days.lowercased())
+}
 
 
 
@@ -109,9 +129,11 @@
  ### 9. Check to see if the size of the array is greater than 5, i.e. contains the days of the weekend. If so, remove the days of the weekend from the array.
  */
 // write your code here
-
-
-
+for days in daysOfTheWeek {
+    if daysOfTheWeek.count > 5 {
+        daysOfTheWeek.popLast()
+    }
+}
 
 
 
