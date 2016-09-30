@@ -17,8 +17,11 @@
 // write your code here
 
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-
+for days in daysOfTheWeek {
+    print(days)
+}
 
 
 
@@ -28,7 +31,11 @@
 // write your code here
 
 
+let numDaysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for (index, days) in numDaysOfTheWeek.enumerated() {
+    print("\(index + 1). \(days)")
+}
 
 
 
@@ -39,11 +46,14 @@
 // write your code here
 
 
+var emptyArray: [String] = []
 
-
-
-
-
+if emptyArray.isEmpty {
+    print("The Array is empty.")
+}
+else {
+    print("Hey, there's stuff in here.")
+}
 
 /*: question4
  ### 4.  Create an empty array of strings called 'reverseEmptyArray' and check to see if it's empty, printing appropriate messages. Use reversed logic from question 3.
@@ -51,12 +61,14 @@
 // write your code here
 
 
+var reverseEmptyArray: [String] = []
 
-
-
-
-
-
+if !emptyArray.isEmpty {
+    print("Hey, there's stuff in here.")
+}
+else {
+    print("The Array is empty.")
+}
 
 /*: question5
  ### 5. Find out the size of the 'daysOfTheWeek' array created earlier, and print it to the screen.
@@ -64,7 +76,7 @@
 // write your code here
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -76,10 +88,12 @@
 // write your code here
 
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
-
-
-
+for (index, days) in daysOfTheWeek.enumerated() {
+    print("\(index + 1). \(days)")
+}
 
 /*: question7
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
@@ -87,8 +101,8 @@
 // write your code here
 
 
-
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -99,8 +113,9 @@
 // write your code here
 
 
-
-
+for days in daysOfTheWeek {
+    print(days.lowercased())
+}
 
 
 
@@ -111,7 +126,10 @@
 // write your code here
 
 
-
+if daysOfTheWeek.count > 5 {
+    daysOfTheWeek.remove(at: 0)
+    daysOfTheWeek.remove(at: 5)
+}
 
 
 
