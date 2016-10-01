@@ -16,9 +16,11 @@
  */
 // write your code here
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-
-
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -27,6 +29,11 @@
  */
 // write your code here
 
+let numDaysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+for (index, day) in numDaysOfTheWeek.enumerated() {
+    print("Day \(index + 1). \(day)")
+}
 
 
 
@@ -38,7 +45,14 @@
  */
 // write your code here
 
+var emptyArray: [String] = []
 
+if emptyArray.isEmpty {
+    print("Array is empty.")
+}
+else {
+    print("You good")
+}
 
 
 
@@ -50,7 +64,14 @@
  */
 // write your code here
 
+let reverseEmptyArray: [String] = []
 
+if !reverseEmptyArray.isEmpty {
+    print("You good")
+}
+else {
+    print("Array is empty!")
+}
 
 
 
@@ -63,6 +84,7 @@
  */
 // write your code here
 
+print(daysOfTheWeek.count)
 
 
 
@@ -75,6 +97,12 @@
  */
 // write your code here
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
+
+for (index, day) in daysOfTheWeek.enumerated() {
+    print("Day \(index + 1). \(day)")
+}
 
 
 
@@ -86,8 +114,8 @@
  */
 // write your code here
 
-
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -99,6 +127,14 @@
 // write your code here
 
 
+var lowerCasedDays: [String] = []
+
+for var day in daysOfTheWeek {
+    day = day.lowercased()
+    lowerCasedDays.append(day)
+}
+
+print(lowerCasedDays)
 
 
 
@@ -110,7 +146,11 @@
  */
 // write your code here
 
-
+if daysOfTheWeek.count > 5 {
+    daysOfTheWeek.remove(at: 0)
+    daysOfTheWeek.remove(at: 5)
+    print(daysOfTheWeek.count)
+}
 
 
 
