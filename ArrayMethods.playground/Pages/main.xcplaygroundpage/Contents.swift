@@ -15,6 +15,10 @@
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
 // write your code here
+var daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+for day in daysOfWeek {
+    print(day)
+}
 
 
 
@@ -26,6 +30,10 @@
  ### 2. Create an unchanging list for the five days of the week called 'numDaysOfTheWeek' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 // write your code here
+let numDaysOfTheWeek = daysOfWeek
+for (index, day) in numDaysOfTheWeek.enumerated() {
+    print(index+1, day, separator: ": ")
+}
 
 
 
@@ -37,6 +45,12 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 // write your code here
+var emptyArray = [String]()
+if emptyArray.isEmpty {
+    print("It's empty")
+} else {
+    print("It's not empty")
+}
 
 
 
@@ -49,7 +63,12 @@
  ### 4.  Create an empty array of strings called 'reverseEmptyArray' and check to see if it's empty, printing appropriate messages. Use reversed logic from question 3.
  */
 // write your code here
-
+var reverseEmptyArray = [String]()
+if !reverseEmptyArray.isEmpty{
+    print("It's not empty")
+} else {
+    print("It's empty")
+}
 
 
 
@@ -62,7 +81,7 @@
  ### 5. Find out the size of the 'daysOfTheWeek' array created earlier, and print it to the screen.
  */
 // write your code here
-
+print(daysOfWeek.count)
 
 
 
@@ -74,8 +93,12 @@
  ### 6. Add the two days of the weekend to the 'daysOfTheWeek array and create an enumerated loop to print the values.
  */
 // write your code here
+daysOfWeek.append("Saturday")
+daysOfWeek.append("Sunday")
 
-
+for (index, day) in daysOfWeek.enumerated() {
+    print(index+1, day, separator: ": ")
+}
 
 
 
@@ -85,9 +108,9 @@
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
  */
 // write your code here
-
-
-
+let sunday = daysOfWeek.remove(at: 6)
+daysOfWeek.insert(sunday, at: 0)
+print(daysOfWeek)
 
 
 
@@ -97,9 +120,12 @@
  ### 8. Loop through the 'daysofTheWeek' array and change each value to lower case.
  */
 // write your code here
+for (index, day) in daysOfWeek.enumerated() {
+    daysOfWeek[index] = day.lowercased()
+}
 
 
-
+print(daysOfWeek)
 
 
 
@@ -110,8 +136,17 @@
  */
 // write your code here
 
+if daysOfWeek.count > 5 {
+    var removed = 0
+    for (index, day) in daysOfWeek.enumerated() {
+        if day == "sunday" || day == "saturday" {
+            daysOfWeek.remove(at: index-removed)
+            removed += 1
+        }
+    }
+}
 
-
+print(daysOfWeek)
 
 
 
