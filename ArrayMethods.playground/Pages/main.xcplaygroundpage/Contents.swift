@@ -15,8 +15,11 @@
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
 // write your code here
+var daysOfTheWeek: [String] = ["Mon", "Teu", "Wed", "Thur", "Fri"]
 
-
+for dayOfWeek in daysOfTheWeek {
+    print(dayOfWeek)
+}
 
 
 
@@ -26,8 +29,11 @@
  ### 2. Create an unchanging list for the five days of the week called 'numDaysOfTheWeek' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 // write your code here
+let numDaysOfTheWeek: [String] = ["Mon", "Teu", "Wed", "Thur", "Fri"]
 
-
+for (index, numDayOfWeek) in numDaysOfTheWeek.enumerated() {
+    print("\(index + 1). \(numDayOfWeek)" )
+}
 
 
 
@@ -38,7 +44,11 @@
  */
 // write your code here
 
+var emptyArray: [String] = []
 
+if(emptyArray.isEmpty){
+    print("No found data.")
+}
 
 
 
@@ -63,7 +73,7 @@
  */
 // write your code here
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -75,7 +85,12 @@
  */
 // write your code here
 
+daysOfTheWeek.append("Sat")
+daysOfTheWeek.append("Sun")
 
+for (index, dayOfWeek) in daysOfTheWeek.enumerated() {
+    print("\(index + 1). \(dayOfWeek)" )
+}
 
 
 
@@ -86,7 +101,9 @@
  */
 // write your code here
 
+daysOfTheWeek.remove(at: 6)
 
+daysOfTheWeek.insert("Sun", at: 0)
 
 
 
@@ -98,7 +115,9 @@
  */
 // write your code here
 
-
+for (index, dayOfWeek) in daysOfTheWeek.enumerated() {
+    print("\(index + 1). \(dayOfWeek.lowercased())" )
+}
 
 
 
@@ -111,7 +130,10 @@
 // write your code here
 
 
-
+if(daysOfTheWeek.count > 5) {
+    daysOfTheWeek.remove(at: 0)
+    daysOfTheWeek.remove(at: 5)
+}
 
 
 
