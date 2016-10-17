@@ -16,7 +16,10 @@
  */
 // write your code here
 
-
+var daysOfTheWeek : [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -26,6 +29,11 @@
  ### 2. Create an unchanging list for the five days of the week called 'numDaysOfTheWeek' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 // write your code here
+let numDaysOfTheWeek : [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+for (index, day) in numDaysOfTheWeek.enumerated() {
+    print("\(index + 1). \(day)")
+}
+
 
 
 
@@ -38,7 +46,12 @@
  */
 // write your code here
 
+var emptyArray : [String] = []
 
+
+if emptyArray.isEmpty {
+    print("This is an empty array")
+}
 
 
 
@@ -50,7 +63,13 @@
  */
 // write your code here
 
+var reverseEmptyArry : [String] = []
 
+if !reverseEmptyArry.isEmpty {
+    print("This is not empty")
+} else {
+    print("It's empty")
+}
 
 
 
@@ -64,7 +83,7 @@
 // write your code here
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -75,7 +94,12 @@
  */
 // write your code here
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for (index, day) in daysOfTheWeek.enumerated() {
+    print("\(index + 1). \(day)")
+}
 
 
 
@@ -86,7 +110,8 @@
  */
 // write your code here
 
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -98,7 +123,9 @@
  */
 // write your code here
 
-
+for day in daysOfTheWeek {
+    print(day.lowercased())
+}
 
 
 
@@ -109,6 +136,12 @@
  ### 9. Check to see if the size of the array is greater than 5, i.e. contains the days of the weekend. If so, remove the days of the weekend from the array.
  */
 // write your code here
+if daysOfTheWeek.count > 5 {
+    daysOfTheWeek.remove(at: 0)
+    if daysOfTheWeek.count > 5 {
+        daysOfTheWeek.remove(at: 5)
+    }
+}
 
 
 
