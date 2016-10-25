@@ -109,10 +109,11 @@ daysOfTheWeek.insert("Saturday", at: 5)
     daysOfTheWeek.insert("Sunday", at: 6)
 
 
-    for day in daysOfTheWeek {
 
-print(day)
-
+for (index, day) in daysOfTheWeek.enumerated() {
+    
+    print("\(index + 1). \(day)")
+    
 }
 
 
@@ -135,10 +136,13 @@ daysOfTheWeek.insert("Sunday", at: 0)
  ### 8. Loop through the 'daysofTheWeek' array and change each value to lower case.
  */
     for (index, day) in daysOfTheWeek.enumerated() {
-daysOfTheWeek[index] = day.lowercased()
+print("\(index + 1). \(day.lowercased())")
         
 
 }
+
+
+
 
 
 
@@ -155,12 +159,8 @@ daysOfTheWeek[index] = day.lowercased()
 
 daysOfTheWeek.remove(at: 6)
         
-    }
-
-    else {
-
-print("no index 6")
-
+daysOfTheWeek.remove(at: 0)
+        
 }
 
 
