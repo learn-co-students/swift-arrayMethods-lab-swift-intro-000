@@ -18,7 +18,7 @@ var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 for day in daysOfTheWeek {
 
-print( "Today is \(day)")
+print(day)
 
 
 
@@ -34,17 +34,17 @@ print( "Today is \(day)")
 let numDaysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 
-for num in numDaysOfTheWeek {
-
-print("today is \(num)[]")
-
+for(index, step) in numDaysOfTheWeek.enumerated() {
+    print("\(index + 1). \(step)")
+    
+}
 
 /*: question3
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
-    var emptyArray: [String]
+    var emptyArray: [String] = []
 
-    if !emptyArray.isEmpty {
+    if emptyArray.isEmpty {
 print("yes")
     }
         else {
@@ -64,17 +64,17 @@ print("no")
 /*: question4
  ### 4.  Create an empty array of strings called 'reverseEmptyArray' and check to see if it's empty, printing appropriate messages. Use reversed logic from question 3.
  */
-    var reverseEmptyArray: [String]
+    var reverseEmptyArray: [String] = []
 
         if !reverseEmptyArray.isEmpty {
 
-print ("this array is empty")
+print ("make tea")
 
 }
 
         else {
 
-print("occupied")
+print("not ready")
 
 }
 
@@ -123,10 +123,10 @@ print(day)
  */
 daysOfTheWeek.remove(at: 6)
 
-print(daysOfTheWeek)
+
 
 daysOfTheWeek.insert("Sunday", at: 0)
-print(daysOfTheWeek)
+
 
 
 
@@ -134,8 +134,9 @@ print(daysOfTheWeek)
 /*: question8
  ### 8. Loop through the 'daysofTheWeek' array and change each value to lower case.
  */
-    for day in daysOfTheWeek {
- print(daysOfTheWeek)
+    for (index, day) in daysOfTheWeek.enumerated() {
+daysOfTheWeek[index] = day.lowercased()
+        
 
 }
 
@@ -163,7 +164,7 @@ print("no index 6")
 }
 
 
-print(daysOfTheWeek)
+
 
 
 
