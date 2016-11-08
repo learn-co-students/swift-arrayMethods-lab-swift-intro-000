@@ -89,6 +89,9 @@ print(daysOfTheWeek.count)
 daysOfTheWeek.append("Saturday")
 daysOfTheWeek.append("Sunday")
 
+for (index, day) in daysOfTheWeek.enumerated() {
+    print("\(index + 1): \(day).")
+}
 
 
 
