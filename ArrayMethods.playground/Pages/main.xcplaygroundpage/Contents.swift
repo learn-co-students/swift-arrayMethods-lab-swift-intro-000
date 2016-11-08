@@ -135,6 +135,7 @@ if daysOfTheWeek.count > 5 {
             daysOfTheWeek.remove(at: ind)
         } else if day == "Saturday" {
             daysOfTheWeek.remove(at: ind - 1)
+            //when the first day is removed the index count changes so we have to minus to get the accurate index.
         } else {
             
         }
