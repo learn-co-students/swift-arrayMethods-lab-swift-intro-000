@@ -14,8 +14,10 @@
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
-// write your code here
-
+var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
