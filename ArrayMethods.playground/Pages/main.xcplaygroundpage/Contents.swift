@@ -113,7 +113,10 @@ daysOfTheWeek.insert("Sunday", at: 0)
 /*: question8
  ### 8. Loop through the 'daysofTheWeek' array and change each value to lower case.
  */
-// write your code here
+for capDay in daysOfTheWeek {
+    capDay.lowercased()
+    
+}
 
 
 
