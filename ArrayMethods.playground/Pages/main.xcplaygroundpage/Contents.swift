@@ -58,7 +58,12 @@ if emptyArray.isEmpty {
 /*: question4
  ### 4.  Create an empty array of strings called 'reverseEmptyArray' and check to see if it's empty, printing appropriate messages. Use reversed logic from question 3.
  */
-
+var reverseEmptyArray: [String] = []
+    if reverseEmptyArray.isEmpty == false {
+        print("This array has stuff.")
+    }   else {
+        print("This array is empty.")
+    }
 
 
 
