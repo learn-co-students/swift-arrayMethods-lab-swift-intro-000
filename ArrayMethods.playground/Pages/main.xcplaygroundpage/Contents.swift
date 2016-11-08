@@ -14,7 +14,7 @@
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
-var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 for day in daysOfTheWeek {
     print(day)
 }
@@ -86,7 +86,8 @@ print(daysOfTheWeek.count)
 /*: question6
  ### 6. Add the two days of the weekend to the 'daysOfTheWeek array and create an enumerated loop to print the values.
  */
-// write your code here
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
 
 
