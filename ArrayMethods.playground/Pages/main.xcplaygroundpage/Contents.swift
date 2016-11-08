@@ -75,8 +75,7 @@ var reverseEmptyArray: [String] = []
 /*: question5
  ### 5. Find out the size of the 'daysOfTheWeek' array created earlier, and print it to the screen.
  */
-// write your code here
-
+print(daysOfTheWeek.count)
 
 
 
