@@ -27,7 +27,10 @@ for day in daysOfTheWeek {
 /*: question2
  ### 2. Create an unchanging list for the five days of the week called 'numDaysOfTheWeek' and print each one by using a loop, prefixed by the position of the day of the week.
  */
-// write your code here
+let numDaysOfTheWeek = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday"]
+for (index, day) in numDaysOfTheWeek.enumerated() {
+    print("\(index + 1): \(day). ")
+}
 
 
 
@@ -38,7 +41,12 @@ for day in daysOfTheWeek {
 /*: question3
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
-// write your code here
+var emptyArray: [String] = []
+if emptyArray.isEmpty {
+    print("This array is empty")
+} else {
+    print("This array is NOT empty!")
+}
 
 
 
