@@ -128,8 +128,19 @@ for capDay in daysOfTheWeek {
 /*: question9
  ### 9. Check to see if the size of the array is greater than 5, i.e. contains the days of the weekend. If so, remove the days of the weekend from the array.
  */
-// write your code here
-
+if daysOfTheWeek.count > 5 {
+    for (ind,day) in daysOfTheWeek.enumerated() {
+        if day == "Sunday" {
+             print("if time")
+            daysOfTheWeek.remove(at: ind)
+        } else if day == "Saturday" {
+            daysOfTheWeek.remove(at: ind - 1)
+        } else {
+            
+        }
+    }
+    print(daysOfTheWeek)
+}
 
 
 
