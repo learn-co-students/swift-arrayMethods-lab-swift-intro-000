@@ -17,9 +17,12 @@
 // write your code here
 
 
+var daysOfTheWeek: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-
-
+for (index, day) in daysOfTheWeek.enumerated()
+{
+    print("Day #\(index + 1) \(day)")
+}
 
 
 /*: question2
@@ -27,7 +30,12 @@
  */
 // write your code here
 
+let numDaysOfTheWeek = daysOfTheWeek
 
+for (index, day) in numDaysOfTheWeek.enumerated()
+{
+    print("Day #\(index + 1) \(day)")
+}
 
 
 
@@ -38,7 +46,13 @@
  */
 // write your code here
 
+var emptyArray: [String] = []
 
+if emptyArray.isEmpty {
+    print("Nothing to see here....")
+} else {
+    print("There's something here!")
+}
 
 
 
@@ -50,20 +64,20 @@
  */
 // write your code here
 
+var reverseEmptyArray: [String] = []
 
-
-
-
-
-
-
+if !reverseEmptyArray.isEmpty {
+    print("ReverseEmptyArray: There's something here...")
+} else {
+    print("ReverseEmptyArray: Nope, still nothing here...")
+}
 
 /*: question5
  ### 5. Find out the size of the 'daysOfTheWeek' array created earlier, and print it to the screen.
  */
 // write your code here
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -75,7 +89,13 @@
  */
 // write your code here
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for (index, day) in daysOfTheWeek.enumerated()
+{
+    print("Day #\(index + 1): \(day)")
+}
 
 
 
@@ -86,9 +106,13 @@
  */
 // write your code here
 
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
-
-
+for (index, day) in daysOfTheWeek.enumerated()
+{
+    print("Day #\(index + 1): \(day)")
+}
 
 
 
@@ -98,7 +122,12 @@
  */
 // write your code here
 
+for (index, day) in daysOfTheWeek.enumerated()
+{
+    daysOfTheWeek[index] = day.lowercased()
 
+    print(daysOfTheWeek[index])
+}
 
 
 
@@ -109,9 +138,23 @@
  ### 9. Check to see if the size of the array is greater than 5, i.e. contains the days of the weekend. If so, remove the days of the weekend from the array.
  */
 // write your code here
+var weekDays: [String] = []
 
+    if daysOfTheWeek.count > 5
+    {
+        for (index, day) in daysOfTheWeek.enumerated()
+        {
+            if day != "Saturday".lowercased() && day != "Sunday".lowercased()
+            {
+                weekDays.append(day.uppercased())
+            }
+        }
+    }
 
-
+    for day in weekDays
+    {
+        print(day)
+    }
 
 
 
