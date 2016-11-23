@@ -16,10 +16,12 @@
  */
 // write your code here
 
+var daysOfTheWeek: [String] = ["Monday", "Tuesday","Wedensday", "Thursday", "Friday"]
 
 
-
-
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 /*: question2
@@ -27,7 +29,10 @@
  */
 // write your code here
 
-
+let numDaysOfTheWeek: [String] = ["Monday", "Tuesday","Wedensday", "Thursday", "Friday"]
+for day in numDaysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -39,7 +44,12 @@
 // write your code here
 
 
-
+var emptyArray: [String] = []
+if emptyArray.isEmpty {
+    print(true)
+} else {
+    print(false)
+}
 
 
 
@@ -52,7 +62,10 @@
 
 
 
-
+var reverseEmotyArray: [String] = []
+if reverseEmotyArray.isEmpty {
+    print(true)
+}
 
 
 
@@ -64,7 +77,7 @@
 // write your code here
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -76,7 +89,11 @@
 // write your code here
 
 
-
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
+for (index, day) in daysOfTheWeek.enumerated() {
+    print("\(index+1) \(day)")
+}
 
 
 
@@ -86,7 +103,8 @@
  */
 // write your code here
 
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -98,7 +116,9 @@
  */
 // write your code here
 
-
+for day in daysOfTheWeek {
+    print(day.lowercased())
+}
 
 
 
@@ -110,7 +130,10 @@
  */
 // write your code here
 
-
+if daysOfTheWeek.count > 5 {
+    daysOfTheWeek.remove(at: 6)
+    daysOfTheWeek.remove(at: 0)
+}
 
 
 
