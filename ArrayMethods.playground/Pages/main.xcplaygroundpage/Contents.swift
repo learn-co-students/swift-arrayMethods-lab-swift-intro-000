@@ -18,8 +18,10 @@
 
 
 
-
-
+var daysOfTheWeek = ["friday","saturday","sunday","monday","tuesday","wednesday","thursday","friday"]
+for the_day in daysOfTheWeek {
+    print("\(the_day)")
+}
 
 
 /*: question2
@@ -27,9 +29,10 @@
  */
 // write your code here
 
-
-
-
+let numDaysOfTheWeek = ["friday","saturday","sunday","monday","tuesday"];
+for (index , the_day) in numDaysOfTheWeek.enumerated(){
+    print("the day is \(the_day)  is in \(index)")
+}
 
 
 
@@ -38,7 +41,13 @@
  */
 // write your code here
 
-
+var emptyArray :[String] = []
+if !emptyArray.isEmpty {
+    print("It's not Empty")
+}
+else {
+    print("It's Empty")
+}
 
 
 
@@ -56,15 +65,13 @@
 
 
 
-
-
 /*: question5
  ### 5. Find out the size of the 'daysOfTheWeek' array created earlier, and print it to the screen.
  */
 // write your code here
 
 
-
+daysOfTheWeek.count
 
 
 
@@ -111,7 +118,10 @@
 // write your code here
 
 
-
+if daysOfTheWeek.count > 5 {
+    daysOfTheWeek.removeLast()
+    daysOfTheWeek.removeLast()
+}
 
 
 
