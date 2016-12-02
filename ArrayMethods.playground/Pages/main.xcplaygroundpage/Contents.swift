@@ -16,6 +16,11 @@
  */
 // write your code here
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thurday", "Friday"]
+for day in daysOfTheWeek {
+    print(day)
+}
+
 
 
 
@@ -26,6 +31,10 @@
  ### 2. Create an unchanging list for the five days of the week called 'numDaysOfTheWeek' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 // write your code here
+let numDaysOfTheWeek: [String] = ["Monday", "Tuesday", "Wednesday", "Thurday", "Friday"]
+for (index, days) in numDaysOfTheWeek.enumerated() {
+    print(index+1,",",days)
+}
 
 
 
@@ -37,6 +46,14 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 // write your code here
+var emptyArray: [String] = []
+if emptyArray.isEmpty {
+    print("Nothing to see here")}
+else {
+    print(emptyArray)
+}
+
+
 
 
 
@@ -50,7 +67,12 @@
  */
 // write your code here
 
-
+var reverseEmptyArray: [String] = []
+if !reverseEmptyArray.isEmpty {
+    print(emptyArray)
+} else {
+    print("Woah it's empty")
+}
 
 
 
@@ -62,6 +84,7 @@
  ### 5. Find out the size of the 'daysOfTheWeek' array created earlier, and print it to the screen.
  */
 // write your code here
+print(daysOfTheWeek.count)
 
 
 
@@ -75,6 +98,11 @@
  */
 // write your code here
 
+let weekendDays: [String] = ["Saturday","Sunday"]
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
+print(daysOfTheWeek)
+
 
 
 
@@ -86,7 +114,18 @@
  */
 // write your code here
 
+/*daysOfTheWeek.remove(at: 6)
+print(daysOfTheWeek)
+daysOfTheWeek.insert("Sunday", at: 0)
+print(daysOfTheWeek)*/
 
+if daysOfTheWeek[6] == "Sunday" {
+    daysOfTheWeek.remove(at: 6)
+    daysOfTheWeek.insert("Sunday", at: 0)
+    print(daysOfTheWeek)
+} else {
+    print("I'm sorry we can't do that")
+}
 
 
 
@@ -99,6 +138,11 @@
 // write your code here
 
 
+for week in daysOfTheWeek {
+    let daysOfTheWeeks = week.lowercased()
+    print(daysOfTheWeeks)
+}
+
 
 
 
@@ -109,7 +153,12 @@
  ### 9. Check to see if the size of the array is greater than 5, i.e. contains the days of the weekend. If so, remove the days of the weekend from the array.
  */
 // write your code here
-
+if daysOfTheWeek.count > 5 {
+    daysOfTheWeek.remove(at: 6)
+    daysOfTheWeek.remove(at: 0)
+} else {
+    print("Nah")
+}
 
 
 
