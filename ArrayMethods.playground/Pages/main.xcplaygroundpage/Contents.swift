@@ -16,8 +16,11 @@
  */
 // write your code here
 
+var daysOfTheWeek = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 
-
+for days in daysOfTheWeek {
+    print("Today is \(days)")
+}
 
 
 
@@ -27,7 +30,10 @@
  */
 // write your code here
 
-
+let numDaysOfTheWeek = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+for num in numDaysOfTheWeek{
+    print("Today is \(num)")
+}
 
 
 
@@ -38,7 +44,14 @@
  */
 // write your code here
 
+var emptyArray:[String] = []
 
+
+if emptyArray.isEmpty {
+    print("No values found in array")
+} else {
+    print("We found something")
+}
 
 
 
@@ -52,6 +65,14 @@
 
 
 
+var reverseEmptyArray:[String] = []
+
+
+if reverseEmptyArray.isEmpty {
+    print("We found something")
+} else {
+    print("No values found in array")
+}
 
 
 
@@ -64,9 +85,7 @@
 // write your code here
 
 
-
-
-
+print(daysOfTheWeek.count)
 
 
 
@@ -77,21 +96,22 @@
 
 
 
-
-
-
+for (index, step) in daysOfTheWeek.enumerated() {
+    print("\(index + 1). \(step)")
+}
 
 /*: question7
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
  */
 // write your code here
 
+daysOfTheWeek.remove(at:6)
+
+print(daysOfTheWeek)
 
 
-
-
-
-
+daysOfTheWeek.append("Sunday")
+print(daysOfTheWeek)
 
 /*: question8
  ### 8. Loop through the 'daysofTheWeek' array and change each value to lower case.
@@ -100,17 +120,21 @@
 
 
 
-
-
-
-
+for days in daysOfTheWeek
+{
+    print((days.lowercased()))
+}
 
 /*: question9
  ### 9. Check to see if the size of the array is greater than 5, i.e. contains the days of the weekend. If so, remove the days of the weekend from the array.
  */
 // write your code here
 
-
+if daysOfTheWeek.count > 5 {
+    daysOfTheWeek.remove(at: 5)
+} else {
+    print("There is no value greater than 5")
+}
 
 
 
