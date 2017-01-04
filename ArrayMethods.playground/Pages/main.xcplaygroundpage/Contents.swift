@@ -17,7 +17,17 @@
 // write your code here
 
 
+var daysOfTheWeek = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+]
 
+for days in daysOfTheWeek {
+    print(days)
+}
 
 
 
@@ -28,7 +38,18 @@
 // write your code here
 
 
+let numDaysOfTheWeek = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+]
 
+
+for (index, day) in numDaysOfTheWeek.enumerated() {
+    print("\(index + 1). \(day)")
+}
 
 
 
@@ -40,7 +61,13 @@
 
 
 
+var emptyarray:[String] = []
 
+if emptyarray.isEmpty{
+    print("empty bro")
+} else {
+    print("there's stuff here man!")
+}
 
 
 
@@ -53,7 +80,13 @@
 
 
 
+var reverseEmptyArray:[String] = []
 
+if !reverseEmptyArray.isEmpty{
+    print("hey man, theres stuff here")
+} else {
+    print("super duper empty bro")
+}
 
 
 
@@ -68,6 +101,7 @@
 
 
 
+print(daysOfTheWeek.count)
 
 
 /*: question6
@@ -76,7 +110,12 @@
 // write your code here
 
 
+daysOfTheWeek.insert("Saturday", at: 5)
+daysOfTheWeek.insert("Sunday", at: 6)
 
+for (index, day) in daysOfTheWeek.enumerated() {
+    print("\(index + 1). \(day)")
+}
 
 
 
@@ -88,6 +127,9 @@
 
 
 
+daysOfTheWeek.remove(at: 6)
+
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -100,6 +142,9 @@
 
 
 
+for lowerdays in daysOfTheWeek {
+    print(lowerdays.lowercased())
+}
 
 
 
@@ -110,7 +155,16 @@
  */
 // write your code here
 
+print(daysOfTheWeek)
 
+if daysOfTheWeek.count >= 5 {
+    daysOfTheWeek.remove(at: 0)
+    daysOfTheWeek.remove(at: 5)
+} else {
+    print(daysOfTheWeek)}
+
+
+print(daysOfTheWeek)
 
 
 
