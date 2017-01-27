@@ -15,7 +15,12 @@
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for day in daysOfTheWeek {
+    
+    print(day)
+}
 
 
 
@@ -26,7 +31,12 @@
  ### 2. Create an unchanging list for the five days of the week called 'weekDays' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 
+let weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for (index, day) in daysOfTheWeek.enumerated() {
+    
+    print("\(index + 1). " + day)
+}
 
 
 
@@ -37,7 +47,19 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 
+var emptyArray = [String]()
 
+if emptyArray.isEmpty {
+    
+    print("Array is Empty")
+    
+} else {
+    
+    for item in emptyArray {
+        
+        print(item)
+    }
+}
 
 
 
@@ -50,7 +72,20 @@
  */
 
 
+var funColors = ["red", "blue", "green"]
 
+if !funColors.isEmpty {
+    
+    for color in funColors {
+        
+        print(color)
+        
+    }
+    
+} else {
+    
+    print("Array is empty!")
+}
 
 
 
@@ -62,7 +97,7 @@
  ### 5. Find out the size of the 'daysOfTheWeek' array created earlier, and print it to the screen.
  */
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -73,7 +108,13 @@
  ### 6. Add the two days of the weekend to the 'daysOfTheWeek array and then loop through the array to print all the values.
  */
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for day in daysOfTheWeek {
+    
+    print(day)
+}
 
 
 
@@ -86,7 +127,8 @@
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
  */
 
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -97,7 +139,10 @@
  ### 8. Loop through the 'daysofTheWeek' array and print each value to the console as lower case.
  */
 
-
+for day in daysOfTheWeek {
+    
+    print(day.lowercased())
+}
 
 
 
