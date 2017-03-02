@@ -14,7 +14,16 @@
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
+var daysOfTheWeek: [String] = ["Monday",
+                               "Tuesday",
+                               "Wednesday",
+                               "Thursday",
+                               "Friday"]
 
+for day in daysOfTheWeek {
+print(day)
+
+}
 
 
 
@@ -26,7 +35,16 @@
  ### 2. Create an unchanging list for the five days of the week called 'weekDays' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 
+var weekDays: [String] = ["Monday",
+                         "Tuesday",
+                         "Wednesday",
+                         "Thursday",
+                         "Friday"
+                        ]
+for (days, step) in daysOfTheWeek.enumerated() {
+print("\(days + 1), \(step)")
 
+}
 
 
 
@@ -38,7 +56,12 @@
  */
 
 
+var emptyArray: [String] = []
 
+if emptyArray.isEmpty {
+print("Array is Empty")
+
+}
 
 
 
@@ -51,6 +74,13 @@
 
 
 
+var funColors: [String] = ["red", "blue", "green"]
+
+    if funColors.isEmpty{
+        print("Array is Empty")
+    } else {
+        print("Nope we have something")
+}
 
 
 
@@ -64,6 +94,7 @@
 
 
 
+print(daysOfTheWeek.count)
 
 
 
@@ -74,7 +105,12 @@
  */
 
 
+daysOfTheWeek.append("Sunday")
+daysOfTheWeek.append("Saturday")
 
+for day in daysOfTheWeek {
+print (day)
+}
 
 
 
@@ -85,10 +121,8 @@
 /*: question7
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
  */
-
-
-
-
+daysOfTheWeek.remove(at: 5)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -97,7 +131,11 @@
  ### 8. Loop through the 'daysofTheWeek' array and print each value to the console as lower case.
  */
 
+for day in daysOfTheWeek {
+    
+print(day.lowercased())
 
+}
 
 
 
