@@ -14,7 +14,7 @@
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
-
+var daysOfTheWeek:[String] = ["monday", "tuesday"]
 
 
 
@@ -39,7 +39,11 @@
 
 
 
+var emptyArray:[String] = [""]
 
+if emptyArray.isEmpty{
+    
+}
 
 
 
@@ -64,7 +68,7 @@
 
 
 
-
+daysOfTheWeek.count
 
 
 
@@ -77,7 +81,7 @@
 
 
 
-
+daysOfTheWeek.append("wednesday")
 
 
 
@@ -87,7 +91,7 @@
  */
 
 
-
+daysOfTheWeek.remove(at: 2)
 
 
 
