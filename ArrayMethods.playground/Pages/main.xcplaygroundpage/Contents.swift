@@ -14,7 +14,11 @@
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -27,7 +31,11 @@
  */
 
 
+let weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for (index, day) in weekDays.enumerated() {
+    print("\(index+1).\(day)")
+}
 
 
 
@@ -38,7 +46,13 @@
  */
 
 
+var emptyArray: [String] = []
 
+if ( emptyArray.isEmpty ) {
+    print("Array is empty")
+} else {
+    print("Array is not empty")
+}
 
 
 
@@ -50,7 +64,11 @@
  */
 
 
+var funColors = ["red", "blue", "green"]
 
+if ( !funColors.isEmpty ) {
+    print("Fun colors are not empty")
+}
 
 
 
@@ -63,7 +81,7 @@
  */
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -75,7 +93,12 @@
 
 
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -87,7 +110,8 @@
  */
 
 
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -100,7 +124,9 @@
 
 
 
-
+for day in daysOfTheWeek {
+    print(day.lowercased())
+}
 
 
 
