@@ -14,9 +14,17 @@
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
+var daysOfTheWeek: [String] = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday"
+]
 
-
-
+for day in daysOfTheWeek {
+  print(day)
+}
 
 
 
@@ -26,10 +34,18 @@
  ### 2. Create an unchanging list for the five days of the week called 'weekDays' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 
+let weekDays: [String] = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday"
+]
 
 
-
-
+for (index, day) in weekDays.enumerated() {
+  print("\(index + 1). \(day)")
+}
 
 
 
@@ -37,8 +53,13 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 
+var emptyArray: [String] = []
 
-
+if emptyArray.isEmpty {
+  print("Array is empty")
+} else {
+  print("Array is not empty")
+}
 
 
 
@@ -49,9 +70,15 @@
  ### 4.  Create an array of strings called 'funColors'. The colors in the array should be "red", "blue" and "green". Check to see if it's NOT empty, printing an appropriate message.
  */
 
+let funColors: [String] = [
+  "red",
+  "green",
+  "blue"
+]
 
-
-
+if !funColors.isEmpty {
+  print("funColors is not empty")
+}
 
 
 
@@ -62,7 +89,7 @@
  ### 5. Find out the size of the 'daysOfTheWeek' array created earlier, and print it to the screen.
  */
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -73,7 +100,12 @@
  ### 6. Add the two days of the weekend to the 'daysOfTheWeek array and then loop through the array to print all the values.
  */
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for day in daysOfTheWeek {
+  print(day)
+}
 
 
 
@@ -87,10 +119,9 @@
  */
 
 
-
-
-
-
+let lastDay = daysOfTheWeek.last!
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert(lastDay, at: 0)
 
 
 /*: question8
@@ -99,7 +130,9 @@
 
 
 
-
+for day in daysOfTheWeek {
+  print(day.lowercased())
+}
 
 
 
