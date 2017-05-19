@@ -14,7 +14,11 @@
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
+var daysOfTheweek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for day in daysOfTheweek {
+    print(day)
+}
 
 
 
@@ -25,8 +29,11 @@
 /*: question2
  ### 2. Create an unchanging list for the five days of the week called 'weekDays' and print each one by using a loop, prefixed by the position of the day of the week.
  */
+let daysOfTheweekConstant = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-
+for (index, day) in daysOfTheweekConstant.enumerated() {
+    print(day, index)
+}
 
 
 
@@ -37,7 +44,9 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 
+var emptyArray: [String] = []
 
+print(emptyArray.isEmpty)
 
 
 
@@ -50,7 +59,8 @@
  */
 
 
-
+var funColors = ["red", "blue", "green"]
+print(!funColors.isEmpty)
 
 
 
@@ -63,7 +73,7 @@
  */
 
 
-
+print(daysOfTheweek.count)
 
 
 
@@ -73,9 +83,13 @@
  ### 6. Add the two days of the weekend to the 'daysOfTheWeek array and then loop through the array to print all the values.
  */
 
+daysOfTheweek.append("Saturday")
+daysOfTheweek.append("Sunday")
 
 
-
+for day in daysOfTheweek {
+    print(day)
+}
 
 
 
@@ -85,7 +99,8 @@
 /*: question7
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
  */
-
+daysOfTheweek.remove(at: 6)
+daysOfTheweek.insert("sunday", at: 0)
 
 
 
@@ -98,7 +113,9 @@
  */
 
 
-
+for day in daysOfTheweek {
+    print(day.lowercased())
+}
 
 
 
