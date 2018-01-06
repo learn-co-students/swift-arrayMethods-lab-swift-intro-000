@@ -57,9 +57,8 @@ for day in daysOfTheWeek{ print(day) }
 /*: question7
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
  */
-let sunday = (daysOfTheWeek.count>0) ? daysOfTheWeek.popLast() : "Sunday"
-daysOfTheWeek.insert(sunday!, at: 0)
-
+let sunday = daysOfTheWeek.popLast() ?? "Sunday"
+daysOfTheWeek.insert(sunday, at: 0)
 
 
 /*: question8
