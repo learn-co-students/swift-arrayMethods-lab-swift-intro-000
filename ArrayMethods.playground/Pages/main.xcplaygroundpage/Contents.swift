@@ -15,7 +15,11 @@
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
 
+var daysOfTheWeek = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
 
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -27,7 +31,11 @@
  */
 
 
+let weekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
 
+for (num,day) in weekDays.enumerated() {
+    print("\(num + 1): \(day)")
+}
 
 
 
@@ -37,7 +45,9 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 
+var emptyArray: [String] = []
 
+emptyArray.isEmpty
 
 
 
@@ -51,7 +61,14 @@
 
 
 
+var funColors = ["red","blue","green"]
 
+if funColors.isEmpty {
+    print("No colors")
+} else {
+    print("your array is full of colors")
+    
+}
 
 
 
@@ -64,7 +81,7 @@
 
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -76,7 +93,12 @@
 
 
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -87,7 +109,10 @@
  */
 
 
+daysOfTheWeek.popLast()
+daysOfTheWeek.insert("Sunday", at: 0)
 
+daysOfTheWeek
 
 
 
@@ -100,7 +125,9 @@
 
 
 
-
+for item in daysOfTheWeek {
+    print(item.lowercased())
+}
 
 
 
