@@ -15,8 +15,10 @@
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
 
-
-
+var daysOfTheWeek = [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ]
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -26,8 +28,10 @@
  ### 2. Create an unchanging list for the five days of the week called 'weekDays' and print each one by using a loop, prefixed by the position of the day of the week.
  */
 
-
-
+let weekDays = [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ]
+for (index, day) in weekDays.enumerated() {
+    print("\(index+1). \(day)")
+}
 
 
 
@@ -38,8 +42,8 @@
  */
 
 
-
-
+var emptyArray: [String] = []
+print(emptyArray.isEmpty)
 
 
 
@@ -50,7 +54,8 @@
  */
 
 
-
+var funColors = [ "red", "blue", "green" ]
+print(!funColors.isEmpty)
 
 
 
@@ -63,7 +68,7 @@
  */
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -74,10 +79,12 @@
  */
 
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
-
-
-
+for days in daysOfTheWeek {
+    print(days)
+}
 
 
 
@@ -86,8 +93,8 @@
  ### 7. Some people start the week on a Sunday. Remove Sunday from the end of the 'daysOfTheWeek' array and then re-add it to the beginning of the array.
  */
 
-
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -99,7 +106,9 @@
 
 
 
-
+for days in daysOfTheWeek {
+    print(days.lowercased())
+}
 
 
 
