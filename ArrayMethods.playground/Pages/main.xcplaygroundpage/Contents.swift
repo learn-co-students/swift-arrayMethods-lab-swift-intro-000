@@ -17,7 +17,11 @@
 
 
 
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -28,7 +32,11 @@
 
 
 
+let weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
+for (index, day) in weekDays.enumerated() {
+    print(index + 1, day)
+}
 
 
 
@@ -37,8 +45,13 @@
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 
+var emptyArray: [String] = []
 
-
+if emptyArray.isEmpty {
+    print("its empty gurrl")
+} else{
+    print("holey moleys there's a little bit of CASH MONEY in HERE")
+}
 
 
 
@@ -51,7 +64,11 @@
 
 
 
+var funColors: [String] = ["red", "blue", "green"]
 
+if !funColors.isEmpty {
+    print("it ain't empty bitch")
+}
 
 
 
@@ -63,7 +80,7 @@
  */
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -76,7 +93,12 @@
 
 
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -88,8 +110,8 @@
 
 
 
-
-
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
 
 
 
@@ -101,7 +123,9 @@
 
 
 
-
+for day in daysOfTheWeek {
+    print(day.lowercased())
+}
 
 
 
