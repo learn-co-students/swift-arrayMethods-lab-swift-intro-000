@@ -14,7 +14,7 @@
 /*: question1
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
-var daysOfTheWeek: [String] = ["Monday", "Tuesday", "Wendsday", "Thursday", "Friday"]
+var daysOfTheWeek: [String] = ["Mondayy", "Tuesday", "Wendsday", "Thursday", "Friday"]
 
 for days in daysOfTheWeek {
     print(days)
