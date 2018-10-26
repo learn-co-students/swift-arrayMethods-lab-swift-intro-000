@@ -15,9 +15,11 @@
  ### 1. Create a changeable list for the five days of the week called 'daysOfTheWeek' and print each one by using a loop.
  */
 
+var daysOfTheWeek: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-
-
+for days in daysOfTheWeek{
+    print(days)
+}
 
 
 
@@ -28,17 +30,25 @@
 
 
 
+let weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 
-
-
+for (index, day) in weekDays.enumerated(){
+    print("\(index + 1). \(day)")
+}
 
 /*: question3
  ### 3. Create an empty array of strings called 'emptyArray' and check to see if it's empty, printing appropriate messages.
  */
 
 
+var emptyArray: [String] = []
 
+if emptyArray.isEmpty {
+    print("The array is empty")
+} else{
+    print("Theres stuff in here!")
+}
 
 
 
@@ -50,8 +60,13 @@
  */
 
 
+var funColors = ["red", "blue", "green"]
 
-
+if !funColors.isEmpty{
+    print("You got colors")
+} else{
+    print("Just black and white today!")
+}
 
 
 
@@ -63,7 +78,7 @@
  */
 
 
-
+print(daysOfTheWeek.count)
 
 
 
@@ -73,9 +88,12 @@
  ### 6. Add the two days of the weekend to the 'daysOfTheWeek array and then loop through the array to print all the values.
  */
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
-
-
+for day in daysOfTheWeek{
+    print(day)
+}
 
 
 
@@ -87,6 +105,9 @@
  */
 
 
+daysOfTheWeek.remove(at: 6)
+daysOfTheWeek.insert("Sunday", at: 0)
+
 
 
 
@@ -97,7 +118,9 @@
  ### 8. Loop through the 'daysofTheWeek' array and print each value to the console as lower case.
  */
 
-
+for day in daysOfTheWeek{
+    print(day.lowercased())
+}
 
 
 
